@@ -4,13 +4,12 @@
 #include<time.h>
 #include<ctype.h>
 
-
 //testU01 for RNG verification
 //portaudio for audio capture
 
 
 
-enum padValues {moduleLength = 18, moduleCount = 10000};
+enum padValues {moduleLength = 18, moduleCount = 100};
 char modifiedBase64Alpha[64] = "_ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.";
 struct padFile{
 
