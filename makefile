@@ -1,5 +1,3 @@
-tester: tester.c truerand.c
-	gcc -o tester  tester.c truerand.c -I.
-program: implementation.c truerand.c
-	gcc -o program  implementation.c truerand.c -I.
+distribution: dis.c cyrand.c
+	gcc -o distribution  dis.c cyrand.c  -std=c11 -I.
 

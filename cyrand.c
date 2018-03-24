@@ -3,8 +3,8 @@
 #include<time.h>
 #include<assert.h>
 
-#define time 100
-#define quality 1000
+#define time 10
+#define quality 10
 
 long getTime()
 {
@@ -58,7 +58,7 @@ char randByte()
 
 
 
-
+/*
 int main (char * argv[], int argc)
 {
 
@@ -72,7 +72,7 @@ printf("%c\n", t);
 }
 	return 0;
 }
-
+*/
 
 
 
