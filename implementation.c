@@ -3,6 +3,8 @@
 #include<string.h>
 #include<time.h>
 #include<ctype.h>
+#include<cyrand.h>
+
 
 //testU01 for RNG verification
 //portaudio for audio capture
@@ -29,7 +31,7 @@ void fillModules(int m, int n, char * modules) // this is a placeholder RNG func
 	{
 		for (int c = 0; c < m; c++)
 		{
-			modules[(moduleLength * i)+c] = (unsigned char)(rand() % 256);
+			modules[(moduleLength * i)+c] = (unsigned char)randByte(); // (unsigned char)(rand() % 256);
 		}
 
 	}
