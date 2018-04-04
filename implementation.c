@@ -6,10 +6,6 @@
 #include<cyrand.h>
 
 
-//testU01 for RNG verification
-//portaudio for audio capture
-
-
 
 enum padValues {moduleLength = 18, moduleCount = 100};
 char modifiedBase64Alpha[64] = "_ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.";
@@ -204,7 +200,7 @@ int main(int argc, char *argv[])
 	while (terminationFlag != 0)
 	{
 		input = 'n';
-		printf("Please select an option:\n a. select padgroup \n b. export padgroups\n c.terminate\n");
+		printf("Please select an option:\n a. select padgroup \n b. export padgroups\n c. terminate\n");
 
 		while(input != 'a' && input != 'b' &&  input != 'c')
 		{		
@@ -266,7 +262,7 @@ int main(int argc, char *argv[])
 
 
 					input = 'n';
-					printf("Please select an option:\n a. send message \n b. recieve message\n c.terminate\n");
+					printf("Please select an option:\n a. send message \n b. recieve message\n c. terminate\n");
 
 					while(input != 'a' && input != 'b' &&  input != 'c')
 					{		
@@ -303,6 +299,7 @@ int main(int argc, char *argv[])
 								}
 								decodeMessage(encoded, prepared);
 								printf("The encrypted message is: %s\n",prepared);
+								printf("Module number is : %d\n", pad -> outgoingPointer);
 								pad -> outgoingPointer += 1;
 							}
 							break;
@@ -312,6 +309,7 @@ int main(int argc, char *argv[])
 							if(pad->incomingPointer < pad->incomingEnd)
 							{
 								printf("%s\n","Please input your message");
+								printf("Expected module number: %d\n", pad->incomingPointer);
 
 
 								int c;

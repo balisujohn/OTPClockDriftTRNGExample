@@ -4,7 +4,7 @@
 #include<assert.h>
 
 #define time 10
-#define quality 10
+#define quality 200
 
 long getTime()
 {
