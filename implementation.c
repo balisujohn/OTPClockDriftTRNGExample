@@ -184,6 +184,8 @@ void exportPads()
 	savePadFile(fp2,p2);
 	free(p1);
 	free(p2);
+	free(modules1);
+	free(modules2);
 	fclose(fp1);
 	fclose(fp2);
 
@@ -208,7 +210,7 @@ int main(int argc, char *argv[])
 		}
 
 
-		char filePath[100] = {""};
+		char filePath[1000] = {""};
 
 
 		switch (input){
@@ -216,7 +218,7 @@ int main(int argc, char *argv[])
 
 			case 'a' :  
 				printf("%s\n", "Please input file path:");
-				fscanf(stdin , "%s", filePath);
+				fscanf(stdin , "%s", filePath); // unsafe
 
 
 				FILE *fp;
@@ -346,6 +348,7 @@ int main(int argc, char *argv[])
 							fp = fopen(filePath, "w+");
 							savePadFile(fp,pad);
 							free(pads);
+							free(pad);
 							fclose(fp);
 
 
@@ -363,7 +366,17 @@ int main(int argc, char *argv[])
 
 			case 'b' : 
 				
-							
+				
+
+			//	printf("Please enter recipient name");
+			
+			//	char * line = NULL;
+			//	size_t length = 0; 
+			//	size_t read;
+			//	read = getline(&line,length,stdin);
+				
+				
+			
 				
 				
 				exportPads(); // may add settings for module count at a later date

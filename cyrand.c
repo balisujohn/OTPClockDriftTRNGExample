@@ -3,8 +3,9 @@
 #include<time.h>
 #include<assert.h>
 
-#define time 10
-#define quality 200
+#define upper 100
+#define lower 10
+#define quality 100
 
 long getTime()
 {
@@ -17,7 +18,8 @@ long getTime()
 long timeDiff()
 {
 	long start = getTime();
-	for(int c = 0; c < time; c++);
+        int  cycleTime = rand() % ((upper*2) + 1 - lower) + lower;
+	for(int c = 0; c < cycleTime; c++)__asm__("");
 	long end = getTime();
 	end -= start;
 	assert(end !=  0);
@@ -57,8 +59,8 @@ char randByte()
 
 
 
-
 /*
+
 int main (char * argv[], int argc)
 {
 
@@ -68,11 +70,11 @@ int main (char * argv[], int argc)
 for(;;)
 {
 char t = randByte();
-printf("%c\n", t);
+printf("%c", t);
 }
 	return 0;
 }
+
+
+
 */
-
-
-
