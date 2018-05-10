@@ -195,7 +195,7 @@ void exportPads()
 int main(int argc, char *argv[])
 {
 
-	printf("Implementation: A Hardware and Operating-System Agnostic Approach to Secure HyperText Communication\n" );
+	printf("One Time Pad Example Program" );
 
 	char input;
 	int  terminationFlag = 1;
